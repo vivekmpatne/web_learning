@@ -1,0 +1,28 @@
+*{ margin: 0; padding: 0;
+    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+}
+#nav h1 {
+            color: rgb(84, 180, 180);
+            background-color: rgb(33, 30, 30);
+            text-align: center;
+            text-transform: capitalize;
+            font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+}
+#inner{
+        font-size: 10px;
+    }
+#outer{
+        font-size: 25px;
+     
+    }
+
+
+
+
+/* we cant add style to the icons */
+
+.linkedin{
+    width: 50px;
+    height: 100px;
+    background-color: aquamarine;
+}
