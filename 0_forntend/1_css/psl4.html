@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX Model</title>
+
+    <link rel="stylesheet" href="psl4.css">
+
+
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            margin: 15px;
+            background-color: aqua;
+            text-align: center;
+
+            border: 5px dotted black;
+
+        }
+        
+
+        #button {
+            height : 70px;
+            width: 70px;
+            padding: 10px 15px;
+            margin: 100px;
+            color: rgb(13, 14, 14);
+            background-color: rgb(206, 147, 74);
+
+            border: 2px dotted rgb(19, 18, 18);
+            border-radius: 77px;
+        }
+
+
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="box" style="box-sizing: content-box;">Box1</div>    
+
+
+    <div class="box" style="box-sizing: border-box;">Box2</div>
+
+    <br>
+    
+    <button id="button">Click Me</button>
+
+</body>
+
+</html>
