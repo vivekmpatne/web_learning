@@ -1,0 +1,16 @@
+.btnAdd{
+  background-color: greenyellow;
+  padding: 5px 15px;
+  border: none; 
+  color: black;
+  border-radius: 9px;
+}
+
+.btnList{
+  background-color: rgb(77, 74, 74);
+  border: 2px solid black;
+  padding: 5px 35px;
+  color: white;
+  border-radius: 7px;
+  text-transform: uppercase;
+}
