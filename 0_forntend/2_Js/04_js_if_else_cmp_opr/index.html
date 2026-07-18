@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>comparison operators and if else condition in js</title>
+
+</head>
+<body>
+
+  <script>
+
+    console.log( typeof(5 > 3) ); // boolean
+    console.log( typeof true ); // boolean
+    console.log( typeof 'abc' ); // string
+    console.log( typeof "abc vivek" ); // string
+    console.log( typeof `abc vivek` ); // string
+    console.log( typeof 5 ); // number
+    console.log( typeof 5.5 ); // number
+    console.log( typeof null ); // object
+    console.log( typeof undefined ); // undefined
+    console.log( typeof NaN ); // number
+    console.log( typeof {} ); // object
+    console.log( typeof [] ); // object
+    console.log( typeof function(){} ); // function
+    console.log( typeof Symbol() ); // symbol
+    console.log( typeof BigInt(123) ); // bigint
+    console.log( typeof new Date() ); // object
+    console.log( typeof /regex/ ); // object
+
+    
+ 
+
+    console.log(5 == '5'); // true 
+    console.log(5 == '5.0'); // true
+    console.log(5 === '5'); // false
+    console.log(5 === '5.0'); // false
+ 
+  // == comparison operator checks for equality of values, while === checks for equality of both value and type.
+
+    console.log(5 > 3); // true
+    console.log(5 < 3); // false
+
+    console.log(5 == 5); // true
+    console.log(5 == 5.0); // true
+    console.log(5 === 5); // true
+    console.log(5 === 5.0); // true
+
+    let age = 21;
+    if( age >= 18 ){
+      console.log("You are eligible to vote.");
+    } else {
+      console.log("You are not eligible to vote.");
+    }
+    
+
+  </script>
+  
+</body>
+</html>
