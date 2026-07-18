@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Bat Ball Stump Game</h1>
+
+  
+    <button class="btn" 
+      onclick="
+      
+      let randNum = Math.random() * 3; 
+      let computerChoice;
+      if( randNum > 0 && randNum <= 1){
+        computerChoice = 'Bat';
+      } else if( randNum > 1 && randNum <= 2){
+        computerChoice = 'Ball';
+      } else {
+        computerChoice = 'Stump';
+      }
+
+      let resultMsg = '';
+      if(computerChoice === 'Bat'){
+        resultMsg = 'You have tied';
+      } else if(computerChoice === 'Ball'){
+        resultMsg  = 'You have won';
+      } else if(computerChoice === 'Stump'){
+        resultMsg = 'Computer has won';
+      }
+
+      alert( `You have chosen Bat \nComputer has chosen ${computerChoice} \n${resultMsg}`);
+      
+    ">Bat</button>
+
+   <button class="btn" onclick="
+  let ballRandNum = Math.random() * 3;
+  let ballComputerChoice;
+
+  if (ballRandNum < 1) {
+    ballComputerChoice = 'Bat';
+  } else if (ballRandNum < 2) {
+    ballComputerChoice = 'Ball';
+  } else {
+    ballComputerChoice = 'Stump';
+  }
+
+  let ballResultMsg = '';
+
+  if (ballComputerChoice === 'Bat') {
+    ballResultMsg = 'Computer has won';
+  } else if (ballComputerChoice === 'Ball') {
+    ballResultMsg = 'You have tied';
+  } else {
+    ballResultMsg = 'You have won';
+  }
+
+  alert(
+    'You have chosen Ball\n' +
+    'Computer has chosen ' + ballComputerChoice + '\n' +
+    ballResultMsg
+  );
+">Ball</button>
+    
+<button class="btn" onclick="
+
+  let strandNum = Math.random() * 3;
+  let stcomputerChoice;
+
+  if (strandNum > 0 && strandNum <= 1) {
+    stcomputerChoice = 'Bat';
+  } else if (strandNum > 1 && strandNum <= 2) {
+    stcomputerChoice = 'Ball';
+  } else {
+    stcomputerChoice = 'Stump';
+  }
+
+  let stresultMsg = '';
+
+  if (stcomputerChoice === 'Bat') {
+    stresultMsg = 'You have won';
+  } else if (stcomputerChoice === 'Ball') {
+    stresultMsg = 'Computer has won';
+  } else if (stcomputerChoice === 'Stump') {
+    stresultMsg = 'You have tied';
+  }
+
+  alert(`You have chosen Stump
+Computer has chosen ${stcomputerChoice}
+${stresultMsg}`);
+
+">Stump</button>
+
+  
+</body>
+</html>
