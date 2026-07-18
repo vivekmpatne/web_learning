@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Practice Exercise</title>
+</head>
+<body>
+
+  <p id = "name-display"></p>
+  <script>
+    const myName = "Vivek";
+    document.querySelector('#name-display').textContent = `Hello, ${myName}! Welcome to our website.`;
+
+    // can use .textContent to set the text content of an element
+
+    // can use .innerText for similar purposes, but .textContent is generally preferred for performance reasons
+
+    console.log(document.querySelector('#name-display').textContent); 
+    // Output: Hello, Vivek! Welcome to our website.
+
+    console.log(myName);
+    // Output: Vivek  
+
+    // eval is used to evaluate JavaScript code represented as a string. It can execute code dynamically, but it should be used with caution due to security risks and performance issues.
+
+    console.log(eval('4 + 4'));
+    // Output: 8
+
+    // without eval, you can simply perform the operation directly in JavaScript:
+    console.log(4 + 4);
+    // Output: 8
+
+    console.log('2+2');
+    // Output: 22 ( as string concatenation, not addition)
+
+
+
+  </script>
+  
+</body>
+</html>
