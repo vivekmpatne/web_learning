@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>truthy and falsy</title>
+</head>
+
+  <body>
+
+
+    <script>
+      
+      let a = '';
+      console.log(a);
+      
+      let b = 0;
+      console.log(b); // 0
+      
+      let c = null;
+      console.log(c); // null
+      
+      let d = "";
+      console.log(d);
+
+      let e = 5/'apple';
+      console.log(e); // NaN
+
+      // NaN => Not a Number
+
+      let f = 'bat'/5; 
+      console.log(f); // NaN
+      
+      
+      let age;
+      if(age){
+        console.log("age is defined");
+      }else{
+        console.log("age is not defined");
+        console.log(age);
+      }
+    </script>
+  </body>
+</html>
