@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>If alternative</title>
+</head>
+<body>
+  
+  <script>
+
+    // 1 : ternary opr 
+    let age = 21;
+    
+    let result;
+    // if(age >= 18){
+    //   result = 'adult';
+    // }else{
+    //   result = 'child';
+    // }
+    //console.log(result);
+
+    let res = age >= 18 ? 'Adult' : "child";
+    console.log(res);
+
+    console.log("====================");
+
+    // 2 : Guard Opr.
+    // for fallback value ( value || defaultValue )
+
+    let age1;
+    let finalAge = age1 || 18;
+
+    console.log(age1); // shows if defined, else undefined
+    console.log(finalAge); // show age1 ka value agar hai, agar nahi hai then shows the default value 18
+
+    // value || defaultVal   is mai value true hona padega, what if value if => 0. then this show defalut val but we need to show zero , Null, undefined as falsy then use the Default Opr => value ?? fallBackValue
+
+
+    console.log("=====================");
+
+    // 3 : Default Opr => value ?? fallBackValue
+
+    let age2 = 0;
+    let finalAge2 = age2 ?? 18;
+    console.log(age2); // 0
+    console.log(finalAge2); // 0 ( here considering 0 as true not as ZERO ( false ) )
+
+    // if ?? => shows finalAge2 as 0. if || shows finalAge2 as 18
+
+    let age3 = null;
+    let finalAge3 = age3 ?? 21;
+    console.log(age3);
+    console.log(finalAge3);
+
+
+
+
+  </script>
+
+</body>
+</html>
