@@ -12,19 +12,8 @@
       class="btn"
       onclick="
         var computerChoice = generateComputerChoice();
-
-        let resultMsg = '';
-        if (computerChoice === 'Bat') {
-          resultMsg = 'You have tied';
-        } else if (computerChoice === 'Ball') {
-          resultMsg = 'You have won';
-        } else if (computerChoice === 'Stump') {
-          resultMsg = 'Computer has won';
-        }
-
-        alert(
-          `You have chosen Bat \nComputer has chosen ${computerChoice} \n${resultMsg}`,
-        );
+        let resultMsg = getResult('Bat', computerChoice);
+        showResult('Bat', computerChoice, resultMsg);
       "
     >
       Bat
@@ -34,22 +23,8 @@
       class="btn"
       onclick="
         var computerChoice = generateComputerChoice();
-
-        if (computerChoice === 'Bat') {
-          ResultMsg = 'Computer has won';
-        } else if (computerChoice === 'Ball') {
-          ResultMsg = 'You have tied';
-        } else {
-          ResultMsg = 'You have won';
-        }
-
-        alert(
-          'You have chosen Ball\n' +
-            'Computer has chosen ' +
-            computerChoice +
-            '\n' +
-            ResultMsg,
-        );
+        resultMsg = getResult('Ball', computerChoice);
+        showResult('Ball', computerChoice, resultMsg);
       "
     >
       Ball
@@ -59,18 +34,8 @@
       class="btn"
       onclick="
         var computerChoice = generateComputerChoice();
-
-        if (computerChoice === 'Bat') {
-          resultMsg = 'You have won';
-        } else if (computerChoice === 'Ball') {
-          resultMsg = 'Computer has won';
-        } else if (computerChoice === 'Stump') {
-          resultMsg = 'You have tied';
-        }
-
-        alert(`You have chosen Stump
-Computer has chosen ${computerChoice}
-${resultMsg}`);
+        resultMsg = getResult('Stump', computerChoice);
+        showResult('Stump', computerChoice, resultMsg);
       "
     >
       Stump
@@ -86,6 +51,40 @@ ${resultMsg}`);
         } else {
           return "Stump";
         }
+      }
+
+      function getResult(userMove, computerMove) {
+        if (userMove === "Bat") {
+          if (computerMove === "Bat") {
+            return "You have tied";
+          } else if (computerMove === "Ball") {
+            return "You have won";
+          } else if (computerMove === "Stump") {
+            return "Computer has won";
+          }
+        } else if (userMove === "Ball") {
+          if (computerMove === "Bat") {
+            return "Computer has won";
+          } else if (computerMove === "Ball") {
+            return "You have tied";
+          } else if (computerMove === "Stump") {
+            return "You have won";
+          }
+        } else {
+          if (computerMove === "Bat") {
+            return "You have won";
+          } else if (computerMove === "Ball") {
+            return "Computer has won";
+          } else if (computerMove === "Stump") {
+            return "You have tied";
+          }
+        }
+      }
+
+      function showResult(userMove, computerMove, result) {
+        alert(
+          `You have chosen ${userMove}. computer have chosen ${computerMove}  and ${result}`,
+        );
       }
     </script>
   </body>
