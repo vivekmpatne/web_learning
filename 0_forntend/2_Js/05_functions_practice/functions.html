@@ -1,36 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Functions</title>
-</head>
-<body>
-  
-  <script>
-    let age = 21;
-    function printAge(){
-      console.log(`Your age is : ${age}`);
-    }
-    printAge();
-    age = 76;
-    printAge();
-    age = 12;
-    printAge();
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      let age = 21;
+      function printAge() {
+        console.log(`Your age is : ${age}`);
+      }
+      printAge();
+      age = 76;
+      printAge();
+      age = 12;
+      printAge();
 
-    // some changes done 
+      // some changes done
 
-    // function with return statement
-    function generateRandomMove(){
-      let randVar = Math.random()*100;
-      return randVar;
-    }
-    
-    for( let i = 0; i < 5; i++){
-      console.log(generateRandomMove());
-    }
+      // function with return statement
+      function generateRandomMove() {
+        let randVar = Math.random() * 1000;
+        return randVar;
+      }
+
+      for (let i = 0; i < 5; i++) {
+        console.log(generateRandomMove());
+      }
+
+      console.log("=================");
+      // function with parameter
+      function sum(a, b) { // sum(a, b) , a & b are the parameters , which is defining the function 
+        let sum = a + b;
+        return sum;
+      }
+
+      let x = 11;
+      let y = 2;
+      console.log(sum(x, y)); // sum ( x , y) => x , y are the arguments ( using the function  )
 
 
+      console.log("=======");
+      // function with default parameter
+      function sub(  m = 2 , n = 3 ) {
+        let sub = m - n;
+        return sub;
+      }
 
-  </script>
+      let o = 11;
+      let p = 16;
+      console.log(sub(o, p)); // 11 - 16 => -5
+      console.log(sub( o ));  // 11 - 3 => 8
+      console.log(sub( p ));  // 16 - 3 => 13
 
-</body>
+      console.log("============")
+      // check one more function
+      function greeting(name){
+        console.log(`Namaste ${name} uncle`);
+      }
+
+      function greeting2(name = 'Modi'){
+        console.log(`Namaste ${name} uncle`);
+      }
+
+      greeting(); // Namaste undefined uncle
+      greeting('Raj'); // Namaste Raj uncle
+
+      greeting2(); // Modi
+      greeting2('Tejas'); 
+
+
+    </script>
+  </body>
 </html>
