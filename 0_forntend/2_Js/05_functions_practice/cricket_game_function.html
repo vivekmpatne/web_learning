@@ -79,15 +79,13 @@ ${resultMsg}`);
     <script>
       function generateComputerChoice() {
         let randNum = Math.random() * 3;
-        let Choice;
         if (randNum > 0 && randNum <= 1) {
-          Choice = "Bat";
+          return "Bat";
         } else if (randNum > 1 && randNum <= 2) {
-          Choice = "Ball";
+          return "Ball";
         } else {
-          Choice = "Stump";
+          return "Stump";
         }
-        return Choice;
       }
     </script>
   </body>
