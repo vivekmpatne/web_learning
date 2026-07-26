@@ -11,7 +11,7 @@
     <button
       class="btn"
       onclick="
-        generateComputerChoice();
+        var computerChoice = generateComputerChoice();
 
         let resultMsg = '';
         if (computerChoice === 'Bat') {
@@ -33,7 +33,7 @@
     <button
       class="btn"
       onclick="
-        generateComputerChoice();
+        var computerChoice = generateComputerChoice();
 
         if (computerChoice === 'Bat') {
           ResultMsg = 'Computer has won';
@@ -58,7 +58,7 @@
     <button
       class="btn"
       onclick="
-        generateComputerChoice();
+        var computerChoice = generateComputerChoice();
 
         if (computerChoice === 'Bat') {
           resultMsg = 'You have won';
@@ -77,17 +77,17 @@ ${resultMsg}`);
     </button>
 
     <script>
-      let computerChoice;
       function generateComputerChoice() {
         let randNum = Math.random() * 3;
-
+        let Choice;
         if (randNum > 0 && randNum <= 1) {
-          computerChoice = "Bat";
+          Choice = "Bat";
         } else if (randNum > 1 && randNum <= 2) {
-          computerChoice = "Ball";
+          Choice = "Ball";
         } else {
-          computerChoice = "Stump";
+          Choice = "Stump";
         }
+        return Choice;
       }
     </script>
   </body>
