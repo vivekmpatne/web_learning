@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Function practice set</title>
+  </head>
+  <body>
+    <h2>questions</h2> 
+     1. Create a method to check if a number is odd or even. <hr> 2. Create
+    a method to return larger of the two numbers.  <hr>
+    3. Create Method to convert
+    Celsius to Fahrenheit F = (9/5) * C + 32
+    <hr>
+    <script>
+
+      // 1 even or odd
+      function checkEvenOdd(numb){
+        if( numb%2 === 0){
+          return 'Even';
+        }else {
+          return 'Odd';
+        }
+      }
+
+      for(let i = 1; i<=7; i++ ){
+        let ran = Math.floor(Math.random()*10);
+        console.log( `${ran}  is a ${checkEvenOdd(ran)} number`);
+      }
+
+
+      // larger of two numbers
+      console.log("================");
+
+      function larg(a, b){
+        if( a > b ){
+          return a;
+        }else{
+          return b;
+        }
+      }
+
+      for( let i = 1; i<= 7; i++){
+        let a = Math.floor(Math.random()*10);
+        let b = Math.ceil(Math.random()*10);
+        console.log(`a: ${a}, b: ${b}, larger: ${larg(a, b)}`);
+      }
+
+      console.log("=============");
+
+      // 3 Convert Celsius to Fahrenheit 
+      function convert_Cel_Fahre( celsi ){
+        let fah = ( (9/5)*celsi ) + 32;
+        return fah.toFixed(2);
+      }
+
+      for(let i  = 1; i<=7; i += 1){
+        let value = Math.floor(Math.random()*100);
+        console.log(`${value}°C is qual to ${convert_Cel_Fahre(value)}°F`);
+      }
+
+
+
+
+
+      
+
+    </script>
+  </body>
+</html>
