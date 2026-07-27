@@ -87,6 +87,46 @@
     console.log(Bike);
 
 
+    // new concept 
+    // nested objects 
+    
+    // in JS object ke under only object hee nahi function bee ek object hota hai
+
+    // OOPs => Encapulation => object ke under hee sab properties and related function sab include hai 
+
+    // object ke under ka function ku method bola jata hai
+
+    // functions can be object properties
+
+    // this keyword is used for refering the current object ka key to the function of the curr object
+
+    console.log('==========')
+    
+    let Computer = {
+      company: 'ASUS',
+      model: 'Vivobook',
+      price: 60000.43453,
+      rating :{
+        stars: 4.5,
+        noOfReviews: 477
+      },
+      displayPrice: function(){
+        console.log( `Price of  the product is : ₹${Computer.price.toFixed(2)}`); // ObjectName.key
+        console.log( `Price of  the product is : ₹${this.price.toFixed(2)}`); // this.key
+      }
+    };
+
+    // Console.log() // Console ek object hai, log() uske under ka ek method hai
+
+    // Math.random() // Math ek object hai, random() uske under ka ek method ( function ) hai
+
+    Computer.displayPrice();
+
+    console.log('==================');
+
+    // topic : AutoBoxing
+
+
 
 
   </script>
