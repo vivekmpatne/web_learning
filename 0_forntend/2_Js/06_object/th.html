@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Intro to Objects</title>
+</head>
+<body>
+
+  // in curly brase {} unser object 
+  // let user = {
+    name : "John Doe",
+    age : 40
+  }
+
+  // obj name => user
+  // obj property => pair or ( key : value )
+  // obj key => name/age
+  // obj value => "vivek"/40
+  // object =>    let objName { key : value pairs };
+
+  // Object access => by dot opr => ex : objName.key
+
+  <script>
+
+    let user = {
+      name : "vivek",
+      age : 20,
+      USN : '1RN24CD112',
+    };
+
+    console.log(user);
+    console.log(typeof(user));
+
+    console.log(user.name);
+    console.log(user.age);
+    console.log(user.USN);
+
+    user.age = 22;
+    console.log(user.age);
+    console.log(user);
+
+    console.log('==================');
+
+    // access => dot notation and bracket notation. 2nd type bellow 
+
+    console.log(user['name']);
+    console.log(user['age']);
+    console.log(user['USN']);
+
+    console.log('===============');
+
+    // the bracket notation used to two special cases. 1 : if you want to give as a key name with special case like . or - then you initialize with string then you can access the string with the help of the bracket notation
+
+    let car ={
+       'abc-xyz' : 21,
+       'a.b' : 'name',
+    };
+    
+    console.log(car['a.b']);
+    console.log(car['abc-xyz']);
+
+    console.log('======');
+
+    // now 2nd case. the dot oper not consider the outside defining variable as the main, but the bracket will consider the outside variable to the main content
+
+    let Bike = {
+      name : 'kavasaki',
+      year : '2011',
+      model : 'ninja',
+      'mahilage' : 10,
+    };
+
+    let itemName = 'mahilage';
+    console.log(Bike.itemName); // undefined ( its not replacing the var name , its trying to finding as propertiesName )
+
+    console.log(Bike[itemName]); // 10 ( here replacing the propName to var and its printing )
+
+
+    // delete value 
+
+    console.log('============');
+
+    console.log(Bike);
+
+    delete Bike.name; // can be done by dot or bracket 
+    delete Bike['year'];
+
+    console.log(Bike);
+
+
+
+
+  </script>
+
+
+
+
+  
+</body>
+</html>
